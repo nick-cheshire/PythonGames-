@@ -1,2 +1,0 @@
-import curses
-curses.initscr()
