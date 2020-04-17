@@ -38,7 +38,7 @@ def pong():
     def ball_restart():
         global ball_speed_x, ball_speed_y, score_time
         current_time = pygame.time.get_ticks()
-        ball.center = (screen_width/2, screen_height/2)
+        ball.center = (screen_width//2, screen_height//2)
         if current_time - score_time < 700:
             number_three = game_font.render("3", False, light_grey)
             screen.blit(number_three,(445, 150))
@@ -70,9 +70,9 @@ def pong():
     pygame.display.set_caption('Pong')
 
     #Game Rectangles
-    ball = pygame.Rect(screen_width/2 - 15, screen_height/2 - 15, 20, 20)
-    player = pygame.Rect(screen_width - 20, screen_height/2 - 70, 10, 140)
-    opponent = pygame.Rect(10, screen_height/2 - 70, 10, 140)
+    ball = pygame.Rect(screen_width//2 - 15, screen_height//2 - 15, 20, 20)
+    player = pygame.Rect(screen_width - 20, screen_height//2 - 70, 10, 140)
+    opponent = pygame.Rect(10, screen_height//2 - 70, 10, 140)
 
     # Colors 
     bg_color = pygame.Color('grey12')
@@ -87,7 +87,7 @@ def pong():
     #Text Variables
     player_score = 0
     opponent_score = 0
-    game_font = pygame.font.Font("freesansbold.ttf", 32)
+    game_font = pygame.font.SysFont("Arial", 30)
 
     #Timer
     score_time = True
